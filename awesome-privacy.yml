@@ -1284,21 +1284,6 @@ categories:
           feature set is similar to Slack's, making it a good replacement for any team
           looking to have greater control over their data.
 
-      - name: RetroShare
-        url: https://retroshare.cc/
-        icon: https://retroshare.cc/img/retroshare-symbol.png
-        github: RetroShare/RetroShare
-        openSource: true
-        description: |
-          Secure group communications, with the option to be used over Tor or I2P. Fast
-          intuitive group and 1-to-1 chats with text and rich media using decentralized
-          chat rooms, with a mail feature for delivering messages to offline contacts.
-          A channels feature makes it possible for members of different teams to stay
-          up-to-date with each other, and to share files. Also includes built-in forums,
-          link aggregations, file sharing and voice and video calling. RetroShare is a
-          bit more complex to use than some alternatives, and the UI is quite *retro*,
-          so may not be appropriate for a non-technical team.
-
       - name: Element
         url: https://element.io/
         github: element-hq/element-web
