@@ -40,7 +40,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Email Security Tools](#email-security-tools) (3)
 	- [VOIP Clients](#voip-clients) (2)
 	- [Virtual Phone Numbers](#virtual-phone-numbers) (8)
-	- [Team Collaboration](#team-collaboration) (7)
+	- [Team Collaboration](#team-collaboration) (6)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (21)
 	- [Mobile Apps](#mobile-apps) (22)
@@ -445,7 +445,6 @@ Revealing your real email address online can put you at risk. Email aliasing all
 Now more than ever we are relying on software to help with team collaboration. Unfortunately many popular options, such as [Slack](https://www.wired.co.uk/article/slack-privacy-settings-notifications), [Microsoft Teams](https://www.wired.co.uk/article/microsoft-teams-meeting-data-privacy), [Google for Work](https://www.wired.com/story/google-tracks-you-privacy/) and [Discord](https://cybernews.com/privacy/discord-privacy-tips-that-you-should-use-in-2020/) all come with some serious privacy implications.<br> Typical features of team collaboration software includes: instant messaging, closed and open group messaging, voice and video conference calling, file sharing/ file drop, and some level or scheduling functionality.
 
 - **[<img src='https://play-lh.googleusercontent.com/wGn6UxVJUVWBOEAR_864Y_TG42iCsr8Ls3xmLoT4oOimSo6lk2_2gfBATqNDNmArKzQ' width='14' alt='' /> Rocket.Chat](https://rocket.chat)** - Easy-to-deploy, self-hosted team collaboration platform with stable, feature-rich cross-platform client apps. The UI is fast, good looking and intuitive, so very little technical experience is needed[…](https://awesome-privacy.xyz/communication/team-collaboration/rocket.chat "View full Rocket.Chat report") 
-- **[<img src='https://retroshare.cc/img/retroshare-symbol.png' width='14' alt='' /> RetroShare](https://retroshare.cc/)** - Secure group communications, with the option to be used over Tor or I2P. Fast intuitive group and 1-to-1 chats with text and rich media using decentralized chat rooms, with a mail feature for deliveri[…](https://awesome-privacy.xyz/communication/team-collaboration/retroshare "View full RetroShare report") 
 - **[<img src='https://element.io/images/favicon.png' width='14' alt='' /> Element](https://element.io/)** - Privacy-focused messenger using the Matrix protocol. The Element client allows for group chat rooms, media sharing voice and video group calls. 
 - **[<img src='https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png' width='14' alt='' /> Internet Relay Chat](https://en.wikipedia.org/wiki/IRC)** - An IRC-based solution is another option, being decentralized there is no point of failure, and it's easy to self-host. However it's important to keep security in mind while configuring your IRC instan[…](https://awesome-privacy.xyz/communication/team-collaboration/internet-relay-chat "View full Internet Relay Chat report") 
 - **[<img src='https://avatars.githubusercontent.com/u/9828093' width='14' alt='' /> Mattermost](https://mattermost.org/)** - Mattermost has an open source edition, which can be self-hosted. It makes a good Slack alternative, with native desktop, mobile and web apps and a wide variety of integrations. 
