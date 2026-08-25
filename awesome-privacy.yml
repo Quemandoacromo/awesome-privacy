@@ -266,18 +266,20 @@ categories:
           and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ietf.org/html/rfc4226)).
 
       - name: Ente Auth
-        url: https://ente.io/auth/
-        icon: https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico
-        openSource: true
-        github: ente-io/ente
+        url: https://ente.com/auth/
+        icon: https://raw.githubusercontent.com/ente/ente/main/mobile/apps/auth/android/app/src/main/play/listings/en-US/graphics/icon/icon.png
+        github: ente/ente
         tosdrId: 5256
         iosApp: https://apps.apple.com/us/app/ente-auth/id6444121398
         androidApp: io.ente.auth
+        discordInvite: z2YVKkycX3
+        subreddit: enteio
+        openSource: true
+        securityAudited: true
         description: |
-          Ente Auth is a free and open-source app which stores and generates TOTP tokens.
-          It can be used with an online account to backup and sync your tokens across your
-          devices (and access them via a web interface) in a secure, end-to-end encrypted
-          fashion. It can also be used offline on a single device with no account necessary.
+          Free, open source TOTP authenticator for mobile, desktop and web. Works fully offline,
+          or with an Ente account to sync codes across devices with end-to-end encrypted backups.
+          Codes can be imported from, and exported to, other apps.
 
       - name: Bitwarden Authenticator
         url: https://bitwarden.com/products/authenticator/
