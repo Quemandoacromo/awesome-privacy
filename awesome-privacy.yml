@@ -1274,42 +1274,43 @@ categories:
       - name: Rocket.Chat
         url: https://rocket.chat
         github: RocketChat/Rocket.Chat
-        tosdrId: 6533
+        tosdrId: 6553
         icon: https://play-lh.googleusercontent.com/wGn6UxVJUVWBOEAR_864Y_TG42iCsr8Ls3xmLoT4oOimSo6lk2_2gfBATqNDNmArKzQ
         openSource: true
         iosApp: https://apps.apple.com/us/app/rocket-chat/id1148741252
         androidApp: chat.rocket.android
         description: |
-          Easy-to-deploy, self-hosted team collaboration platform with stable, feature-rich
-          cross-platform client apps. The UI is fast, good looking and intuitive, so very
-          little technical experience is needed for users of the platform. Rocket.Chat's
-          feature set is similar to Slack's, making it a good replacement for any team
-          looking to have greater control over their data.
+          Easy-to-deploy, self-hosted Slack alternative with polished cross-platform apps.
+          End-to-end encryption is supported, but off by default - without it, workspace
+          admins can read all messages. Usage statistics are sent by default.
 
       - name: Element
         url: https://element.io/
         github: element-hq/element-web
         tosdrId: 2498
-        icon: https://element.io/images/favicon.png
-        iosApp: https://apps.apple.com/us/app/element-messenger/id1083446067
-        androidApp: im.vector.app
+        icon: https://avatars.githubusercontent.com/u/13446337
+        openSource: true
+        securityAudited: true
+        iosApp: https://apps.apple.com/us/app/element-x-secure-chat-call/id1631335820
+        androidApp: io.element.android.x
         description: |
           Privacy-focused messenger using the Matrix protocol. The Element client allows
-          for group chat rooms, media sharing voice and video group calls.
+          for group chat rooms, media sharing, voice and video group calls.
           End-to-end encryption by default for message content, but not metadata,
           which remains visible to the home server operator.
 
       - name: Mattermost
-        url: https://mattermost.org/
+        url: https://mattermost.com/
         github: mattermost/mattermost
         tosdrId: 2994
         icon: https://avatars.githubusercontent.com/u/9828093
+        openSource: true
         androidApp: com.mattermost.rn
         iosApp: https://apps.apple.com/us/app/mattermost/id1257222717
         description: |
-          Mattermost has an open source edition, which can be self-hosted. It makes a good
-          Slack alternative, with native desktop, mobile and web apps and a wide variety of
-          integrations.
+          Self-hostable Slack alternative with native desktop, mobile and web apps, and many
+          integrations. There's no end-to-end encryption, so the server can read all
+          messages, and telemetry is on by default. The open source edition caps at 250 users.
 
       - name: Zulip
         url: https://zulip.com
