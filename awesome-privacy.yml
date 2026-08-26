@@ -1297,19 +1297,6 @@ categories:
           Privacy-focused messenger using the Matrix protocol. The Element client allows
           for group chat rooms, media sharing voice and video group calls.
 
-      - name: Internet Relay Chat
-        icon: https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png
-        openSource: true
-        url: https://en.wikipedia.org/wiki/IRC
-        description: |
-          An IRC-based solution is another option, being decentralized there is no point
-          of failure, and it's easy to self-host. However it's important to keep security
-          in mind while configuring your IRC instance and ensure that channels are properly
-          encrypted - IRC tends to be better for open communications. There's a variety of
-          clients to choose from - popular options include: The Longe (Web-based), HexChat
-          (Linux), Pidgin (Linux), WeeChat (Linux, terminal-based), IceChat (Windows),
-          XChat Aqua (MacOS), Palaver (iOS) and Revolution (Android).
-
       - name: Mattermost
         url: https://mattermost.org/
         github: mattermost/mattermost
@@ -1350,6 +1337,12 @@ categories:
         conferencing, but without the additional collaboration features.
         For example, [Tox](https://tox.chat/), [Mumble](https://www.mumble.info/)
         and [Jami](https://jami.net/).<br>
+        [IRC](https://en.wikipedia.org/wiki/IRC) is decentralized, easy to self-host and has
+        a wide choice of clients, making it a good fit for open community channels and public
+        project support. But there's no end-to-end encryption - TLS only protects the
+        connection to the server, so operators can read all messages, and your IP may be
+        exposed unless the network supports host cloaking. Avoid it for private or
+        confidential team communication.<br>
         For Conferences, [OSEM](https://osem.io) is an open source all-in-one
         conference management tool, providing Registration, Schedules, Live and
         Recorded Sessions, Paper Submissions, Marketing Pages and Administration.
