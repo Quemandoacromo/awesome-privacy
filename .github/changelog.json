@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:55:22Z",
+  "generatedAt": "2026-08-26T17:08:43Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -29,6 +29,7 @@
     "1c9aef3329f9ed4b5c4e89b7ab9d780694183552",
     "1d1b4b8611b4b62ea13f3b4a6f332cad493b1ef2",
     "1e5057fb5ac5c7b750d0dc5bb543af28d1ea31a7",
+    "1ebe3e16aa9ca016a71888aaf9b126c394930938",
     "1f79ce2ce71e6ab3526fd0995b94df67252510f2",
     "2173bbfac987696ebd73a30b05bdb2ac836c7ab2",
     "2275c0696dde8ab183f83b048e0baab4fe64ef7d",
@@ -416,9 +417,69 @@
     761,
     762,
     763,
-    764
+    764,
+    767,
+    768,
+    769
   ],
   "entries": [
+    {
+      "date": "2026-08-26",
+      "sha": "1ebe3e16aa9ca016a71888aaf9b126c394930938",
+      "pr": {
+        "number": 770,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/770",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "Internet Relay Chat",
+              "category": "Communication",
+              "section": "Team Collaboration"
+            }
+          ],
+          "modified": [
+            {
+              "name": "Element",
+              "category": "Communication",
+              "section": "Team Collaboration",
+              "fields": [
+                "androidApp",
+                "description",
+                "icon",
+                "iosApp",
+                "openSource",
+                "securityAudited"
+              ]
+            },
+            {
+              "name": "Mattermost",
+              "category": "Communication",
+              "section": "Team Collaboration",
+              "fields": [
+                "description",
+                "openSource",
+                "url"
+              ]
+            },
+            {
+              "name": "Rocket.Chat",
+              "category": "Communication",
+              "section": "Team Collaboration",
+              "fields": [
+                "description",
+                "tosdrId"
+              ]
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-25",
       "sha": "1d1b4b8611b4b62ea13f3b4a6f332cad493b1ef2",
@@ -7071,6 +7132,36 @@
   ],
   "rejections": [
     {
+      "date": "2026-08-26",
+      "title": "Adds SafeAgent to Browser Extensions",
+      "pr": {
+        "number": 769,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/769",
+        "author": "Bemosha",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/96292022?v=4"
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Add clearbox to Utilities > Metadata Removal",
+      "pr": {
+        "number": 768,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/768",
+        "author": "wedo911",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/254511719?v=4"
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "title": "Adds Formatho to Online Tools",
+      "pr": {
+        "number": 767,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/767",
+        "author": "Ritavidhata",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/265758138?v=4"
+      }
+    },
+    {
       "date": "2026-08-24",
       "title": "Add FormatTailor to Metadata Removal",
       "pr": {
@@ -7108,16 +7199,6 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/761",
         "author": "Pixels512",
         "authorAvatar": "https://avatars.githubusercontent.com/u/261778609?v=4"
-      }
-    },
-    {
-      "date": "2026-08-24",
-      "title": "Add BuyUKeSIM to Virtual Phone Numbers",
-      "pr": {
-        "number": 759,
-        "url": "https://github.com/lissy93/awesome-privacy/pull/759",
-        "author": "BuyUKeSIM",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/302600747?v=4"
       }
     },
     {
@@ -7508,16 +7589,6 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/698",
         "author": "SoloEminence",
         "authorAvatar": "https://avatars.githubusercontent.com/u/132285546?v=4"
-      }
-    },
-    {
-      "date": "2026-07-25",
-      "title": "Add REDACT privacy eraser for Windows",
-      "pr": {
-        "number": 697,
-        "url": "https://github.com/lissy93/awesome-privacy/pull/697",
-        "author": "yonasabeselom",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/52823427?v=4"
       }
     },
     {
