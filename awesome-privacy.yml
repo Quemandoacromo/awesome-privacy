@@ -1296,6 +1296,8 @@ categories:
         description: |
           Privacy-focused messenger using the Matrix protocol. The Element client allows
           for group chat rooms, media sharing voice and video group calls.
+          End-to-end encryption by default for message content, but not metadata,
+          which remains visible to the home server operator.
 
       - name: Mattermost
         url: https://mattermost.org/
