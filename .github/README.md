@@ -1913,6 +1913,11 @@ be physically tracked (CCTV, phone location, card payments etc)
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
+> [Vultisig](https://vultisig.com/) is a seedless, self-custodial wallet.
+> It uses MPC threshold signatures to split your key across several devices you own,
+> so there's no seed phrase to write down or leak. It adds no on-chain privacy,
+> and chain queries default to Vultisig's own endpoints unless you set a custom RPC.
+> 
 > [Metamask](https://metamask.io/) (Ethereum and ERC20 tokens) is a bridge
 > that allows you to visit and interact with distributed web apps in your browser.
 > Metamask has good hardware wallet support, so you can use it to swap, stake,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T17:08:43Z",
+  "generatedAt": "2026-08-29T11:32:29Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -141,6 +141,7 @@
     "9d1bc2480ddd364c385f6ad6d9e0722202fe6205",
     "9d6dcf7f92c91b4a035a1e97761fbe5ec02e403f",
     "9ef9e90d30804239482c9a6e2903fd015b1224c4",
+    "a1e7944d48308f33d392ae33fb263cebfed85624",
     "a2cef5cbf9e19acbf192c97b59bb82e06a7f3a2a",
     "a539b1dd64eba2d9f68f3a63c4f2b170fc31fcef",
     "a6a8682af6500066d293b3390224fbdfdbe219c7",
@@ -420,7 +421,12 @@
     764,
     767,
     768,
-    769
+    769,
+    771,
+    772,
+    773,
+    774,
+    775
   ],
   "entries": [
     {
@@ -7131,6 +7137,56 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-29",
+      "title": "Adds Humla to Digital Notes",
+      "pr": {
+        "number": 775,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/775",
+        "author": "michaelwilhelmsen",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/6598620?v=4"
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "title": "Add swapfile.io to Utilities > Metadata Removal",
+      "pr": {
+        "number": 774,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/774",
+        "author": "mecanbay",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/21036722?v=4"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Adds html.cloud to File Drop",
+      "pr": {
+        "number": 773,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/773",
+        "author": "viljamilaurila",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/11646701?v=4"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Adds OneTake to Screenshot Tools",
+      "pr": {
+        "number": 772,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/772",
+        "author": "Arephan",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/8092830?v=4"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Add Noctis under Networking / Proxies",
+      "pr": {
+        "number": 771,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/771",
+        "author": "Krasnopolskiy",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/26970324?v=4"
+      }
+    },
     {
       "date": "2026-08-26",
       "title": "Adds SafeAgent to Browser Extensions",
