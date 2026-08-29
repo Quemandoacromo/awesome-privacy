@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-08-29T11:32:29Z",
+  "generatedAt": "2026-08-29T20:00:18Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "02da4de50e6e90ed41d4d4c4fe5d8615a85a45a0",
     "0565145265ae63168dafcd48c5e13d8604691a10",
+    "070d8a4d3a8f0ae499248ddcc4769bbf0fcf076f",
     "0720acdb7bc3f8b7f100cbbc7faea3fc476067df",
     "079c3242b4ca058a8ccb252da4dccd4f30870542",
     "09c0116be9f371c94511c1f1ce7cb5d3c4bd7708",
@@ -426,9 +427,34 @@
     772,
     773,
     774,
-    775
+    775,
+    777,
+    778
   ],
   "entries": [
+    {
+      "date": "2026-08-29",
+      "sha": "070d8a4d3a8f0ae499248ddcc4769bbf0fcf076f",
+      "pr": {
+        "number": 779,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/779",
+        "author": "duggytuxy",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/61513268?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "SysWarden",
+              "category": "Operating Systems",
+              "section": "Linux Defenses"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-26",
       "sha": "1ebe3e16aa9ca016a71888aaf9b126c394930938",
@@ -7137,6 +7163,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-29",
+      "title": "Add Presend to Metadata Removal",
+      "pr": {
+        "number": 778,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/778",
+        "author": "presendapp",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/300177977?v=4"
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Adds Computer Scams to Online Tools",
+      "pr": {
+        "number": 777,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/777",
+        "author": "computerscams",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/320008204?v=4"
+      }
+    },
     {
       "date": "2026-08-29",
       "title": "Adds Humla to Digital Notes",

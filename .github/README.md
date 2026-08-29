@@ -85,7 +85,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Operating Systems**
 	- [Mobile Operating Systems](#mobile-operating-systems) (3)
 	- [Desktop Operating Systems](#desktop-operating-systems) (5)
-	- [Linux Defenses](#linux-defenses) (6)
+	- [Linux Defenses](#linux-defenses) (7)
 	- [Windows Defences](#windows-defences) (16)
 	- [Mac OS Defences](#mac-os-defences) (2)
 	- [Anti-Malware](#anti-malware) (2)
@@ -1627,6 +1627,7 @@ See: [Windows 10 security guide](https://heimdalsecurity.com/en/windows-10-secur
 - **[<img src='https://icon.horse/icon/www.chkrootkit.org' width='14' alt='' /> chkrootkit](http://www.chkrootkit.org)** - Locally checks for signs of a rootkit. 
 - **[<img src='https://icon.horse/icon/www.snort.org' width='14' alt='' /> Snort](https://www.snort.org)** - Open source intrusion prevention system capable of real-time traffic analysis and packet logging. 
 - **[<img src='https://icon.horse/icon/www.bleachbit.org' width='14' alt='' /> BleachBit](https://www.bleachbit.org)** - Clears cache and deletes temporary files very effectively. This frees up disk space, improves performance, but most importantly helps to protect privacy. 
+- **[<img src='https://avatars.githubusercontent.com/u/61513268?v=4' width='14' alt='' /> SysWarden](https://github.com/duggytuxy/syswarden)** - Open-source, host-local Linux security orchestrator combining nftables enforcement, system telemetry, threat-intelligence feeds, out-of-band WAAP log analysis and a terminal dashboard. It requires Lin[…](https://awesome-privacy.xyz/operating-systems/linux-defenses/syswarden "View full SysWarden report") 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
