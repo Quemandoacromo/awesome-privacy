@@ -4791,21 +4791,12 @@ categories:
         followWith: Bitcoin or Ethereum & ERC-20 tokens
         github: digitalbitbox/bitbox-wallet-app
 
-      - name: Vultisig
-        url: https://vultisig.com
-        icon: https://avatars.githubusercontent.com/u/157932671
-        github: vultisig/vultisig-ios
-        iosApp: https://apps.apple.com/app/apple-store/id6503023896
-        androidApp: com.vultisig.wallet
-        openSource: true
-        description: |
-          Seedless, self-custodial multi-chain wallet using MPC threshold signatures to
-          split keys across your own devices. No account or sign-up. Chain queries
-          default to Vultisig endpoints (custom RPC opt-out); no CoinJoin, Tor or coin
-          control.
-        followWith: 30+ Chains
-
       notableMentions: |
+        [Vultisig](https://vultisig.com/) is a seedless, self-custodial wallet.
+        It uses MPC threshold signatures to split your key across several devices you own,
+        so there's no seed phrase to write down or leak. It adds no on-chain privacy,
+        and chain queries default to Vultisig's own endpoints unless you set a custom RPC.
+
         [Metamask](https://metamask.io/) (Ethereum and ERC20 tokens) is a bridge
         that allows you to visit and interact with distributed web apps in your browser.
         Metamask has good hardware wallet support, so you can use it to swap, stake,
