@@ -4311,6 +4311,18 @@ categories:
           Clears cache and deletes temporary files very effectively. This frees up disk space, improves performance, but most
           importantly helps to protect privacy.
 
+      - name: SysWarden
+        url: https://github.com/duggytuxy/syswarden
+        icon: https://avatars.githubusercontent.com/u/61513268?v=4
+        github: duggytuxy/syswarden
+        followWith: Linux
+        openSource: true
+        description: |
+          Open-source, host-local Linux security orchestrator combining nftables
+          enforcement, system telemetry, threat-intelligence feeds, out-of-band
+          WAAP log analysis and a terminal dashboard. It requires Linux
+          administration and is not an inline proxy.
+
       notableMentions: |
         [SecTools.org](https://sectools.org) is a directory or popular Unix security tools.
 
