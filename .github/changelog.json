@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T20:00:18Z",
+  "generatedAt": "2026-08-30T22:06:20Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -159,6 +159,7 @@
     "b5a69fc359c36a1bb7ea05c0e29947f73930e189",
     "b677c2f52c1f2606eddecca0ffc6524339aa0dbc",
     "b718d9cd6c2f4b9c6129d4c9d6b70c1968a137f8",
+    "b7534b0d5b0f948d6a0e2b72e5b11d8f14947af3",
     "b8b8fa712eba68ffcbf4812d12e5c5b9b45c075f",
     "b922bc401cba34c27b79368fce3f572864b2ada0",
     "ba27593a5dcbfd58b4b9079277c54b0836d183d8",
@@ -429,7 +430,10 @@
     774,
     775,
     777,
-    778
+    778,
+    780,
+    781,
+    782
   ],
   "entries": [
     {
@@ -7163,6 +7167,36 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-08-30",
+      "title": "Add Yad to Developer Tools",
+      "pr": {
+        "number": 782,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/782",
+        "author": "holistis",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/272782562?v=4"
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Adds BugShot to Developer Tools",
+      "pr": {
+        "number": 781,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/781",
+        "author": "SinhyeokKang",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/166728343?v=4"
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Add Mirror Veil (on-device chat redaction)",
+      "pr": {
+        "number": 780,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/780",
+        "author": "justlayme",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/257996955?v=4"
+      }
+    },
     {
       "date": "2026-08-29",
       "title": "Add Presend to Metadata Removal",
