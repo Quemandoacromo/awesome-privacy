@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T22:06:20Z",
+  "generatedAt": "2026-09-03T17:03:06Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -194,6 +194,7 @@
     "dd7657fc7933d73d7ecb0d3c5ebea2c0e64b26c7",
     "dec42f0572b2f52fad5ccd5f52ae6f4ae0b18721",
     "df686cd77a1ff89ba9a318089d46c1585b63b572",
+    "e0ba2687c748e6a31a9fd3dc4caa636dc02fae6e",
     "e1235f1a6cf8694cb54f2c612de154f90db86a07",
     "e192c0a4ae62d6d5dc4f3d163825b6b90205527a",
     "e33ee115950f0d56c764e5d0581e1d697afbb63f",
@@ -433,9 +434,46 @@
     778,
     780,
     781,
-    782
+    782,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790
   ],
   "entries": [
+    {
+      "date": "2026-09-03",
+      "sha": "e0ba2687c748e6a31a9fd3dc4caa636dc02fae6e",
+      "pr": {
+        "number": 791,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/791",
+        "author": "lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Gadgetbridge",
+              "category": "Smart Home & IoT",
+              "section": "Wearables & Health"
+            }
+          ]
+        },
+        "sections": {
+          "added": [
+            {
+              "name": "Wearables & Health",
+              "category": "Smart Home & IoT"
+            }
+          ]
+        },
+        "categories": {}
+      }
+    },
     {
       "date": "2026-08-29",
       "sha": "070d8a4d3a8f0ae499248ddcc4769bbf0fcf076f",
@@ -7167,6 +7205,76 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-09-03",
+      "title": "Adds GO AI EXIF Tool to Online Tools",
+      "pr": {
+        "number": 790,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/790",
+        "author": "Feghal",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/16435721?v=4"
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Adds Refentra to Metadata Removal",
+      "pr": {
+        "number": 789,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/789",
+        "author": "MarcoRysz",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/193014657?v=4"
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Add nosend in Image Editors",
+      "pr": {
+        "number": 788,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/788",
+        "author": "chivesz",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/34375681?v=4"
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Add pdf-iq to File Converters",
+      "pr": {
+        "number": 787,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/787",
+        "author": "billionedges-mk",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/244028233?v=4"
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "title": "Add Cloudflare Security Art in Firewalls",
+      "pr": {
+        "number": 786,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/786",
+        "author": "buybitart",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/215138865?v=4"
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "title": "Adds Sessionplan to Task Management",
+      "pr": {
+        "number": 785,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/785",
+        "author": "tim-peters",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1482203?v=4"
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "title": "feat: add Document & File Privacy Tools subsection (ihaveatoolforthat.com)",
+      "pr": {
+        "number": 784,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/784",
+        "author": "iqbalhssn78",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/246013091?v=4"
+      }
+    },
     {
       "date": "2026-08-30",
       "title": "Add Yad to Developer Tools",

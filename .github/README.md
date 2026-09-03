@@ -97,6 +97,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Smart Home & IoT**
 	- [Smart Home](#smart-home) (1)
 	- [Security Cameras](#security-cameras) (1)
+	- [Wearables & Health](#wearables--health) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
 	- [Crypto Wallets](#crypto-wallets) (6)
@@ -1833,6 +1834,14 @@ human voice interface while also protecting your privacy and security
 ### Security Cameras
 
 - **[<img src='https://avatars.githubusercontent.com/u/271067237?s=400&u=183f42b70679974bfd5b7e0ad0bd12aee0b45d98&v=4' width='14' alt='' /> Secluso](https://secluso.com)** - An open source, end-to-end encrypted home security camera solution (Pi Zero 2W). Easy to setup with GUI deploy tool. Fully E2EE remote access (live streaming & smart motion alerts) via mobile app and[…](https://awesome-privacy.xyz/smart-home-and-iot/security-cameras/secluso "View full Secluso report") 
+
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
+### Wearables & Health
+
+- **[<img src='https://codeberg.org/Freeyourgadget/Gadgetbridge/raw/branch/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png' width='14' alt='' /> Gadgetbridge](https://gadgetbridge.org/)** - Open source Android app that connects smartwatches and fitness trackers to your phone without the vendor app or cloud account. Supports 30+ brands (Mi Band, Amazfit, Pebble, Huawei), though feature pa[…](https://awesome-privacy.xyz/smart-home-and-iot/wearables-and-health/gadgetbridge "View full Gadgetbridge report") 
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
