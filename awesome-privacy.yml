@@ -4694,6 +4694,21 @@ categories:
         securityAudited: false
         openSource: true
 
+    - name: Wearables & Health
+      alternativeTo: ['google fit', 'apple health', 'samsung health']
+      services:
+      - name: Gadgetbridge
+        description: |
+          Open source Android app that connects smartwatches and fitness trackers to
+          your phone without the vendor app or cloud account. Supports 30+ brands
+          (Mi Band, Amazfit, Pebble, Huawei), though feature parity and reliability
+          vary by device.
+        url: https://gadgetbridge.org/
+        icon: https://codeberg.org/Freeyourgadget/Gadgetbridge/raw/branch/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+        codeberg: Freeyourgadget/Gadgetbridge
+        followWith: Android
+        openSource: true
+
   - name: Finance
     sections:
     - name: Cryptocurrencies
