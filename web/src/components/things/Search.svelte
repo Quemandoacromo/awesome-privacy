@@ -1,9 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Fuse from 'fuse.js';
-  import { fetchCategories, slugify } from '@utils/fetch-data';
+  import { fetchCategories } from '@utils/fetch-data';
   import { formatLink } from '@utils/parse-markdown';
-  import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
+  import {
+    prepareSearchItems,
+    searchOptions,
+    isRelevant,
+  } from '@utils/do-searchy-searchy';
   import type { SearchItem } from '@utils/do-searchy-searchy';
 
   interface Props {
@@ -19,13 +23,6 @@
     const items = prepareSearchItems(await fetchCategories());
     fuse = new Fuse(items, searchOptions);
   });
-
-  const makeResultLink = (cat?: string, sec?: string, itm?: string) => {
-    if (!cat) return '/';
-    if (!sec) return `/${slugify(cat)}/`;
-    if (!itm) return `/${slugify(cat)}/${slugify(sec)}/`;
-    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}/`;
-  };
 
   const makeResultText = (cat?: string, sec?: string, itm?: string) => {
     if (itm) return itm;
@@ -52,6 +49,7 @@
     searchQuery && fuse
       ? fuse
           .search(searchQuery)
+          .filter(isRelevant)
           .map((r) => r.item)
           .slice(0, 25)
       : [],
@@ -68,7 +66,7 @@
       event.preventDefault();
       const active = results[activeIndex];
       window.location.href = active
-        ? makeResultLink(active.category, active.sectionName, active.name)
+        ? active.path
         : `/search/${encodeURIComponent(searchQuery)}/`;
     }
     if (event.key === 'Escape') {
@@ -117,11 +115,7 @@
             aria-selected={i === activeIndex}
           >
             <a
-              href={makeResultLink(
-                result.category,
-                result.sectionName,
-                result.name,
-              )}
+              href={result.path}
               title={makeTitle(result.type, result.description)}
             >
               <span class="name">

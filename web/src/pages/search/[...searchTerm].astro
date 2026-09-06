@@ -3,7 +3,11 @@ import Fuse from 'fuse.js';
 
 import Layout from '@layouts/Layout.astro';
 import { fetchData, slugify } from '@utils/fetch-data';
-import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
+import {
+	prepareSearchItems,
+	searchOptions,
+	isRelevant,
+} from '@utils/do-searchy-searchy';
 import type { SearchItem } from '@utils/do-searchy-searchy';
 import Search from '@components/things/Search.svelte';
 import SmartSuggestions from '@components/things/SmartSuggestions.svelte';
@@ -23,6 +27,7 @@ const searchTerm = Astro.params.searchTerm;
 
 const searchResults = fuse
 	.search(searchTerm || '')
+	.filter(isRelevant)
 	.map((result) => result.item);
 
 const services = searchResults.filter((result) => result.type === 'Service');
@@ -96,7 +101,7 @@ const beer = putResultsIntoGroups();
 								<ul class="service-list">
 									{section.items.map((item) => (
 										<li>
-											<a href={item.url}>{item.name}</a>
+											<a href={item.path}>{item.name}</a>
 										</li>
 									))}
 								</ul>
