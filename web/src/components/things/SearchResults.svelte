@@ -18,9 +18,14 @@
     { key: 'category', label: 'Category' },
   ];
 
+  const PAGE_SIZE = 50;
+
   let results: SearchItem[] = $state([]);
   let loading = $state(true);
   let sort: Sort = $state('relevance');
+  let shown = $state(PAGE_SIZE);
+
+  const visible = $derived(results.slice(0, shown));
 
   onMount(async () => {
     const wanted = new URLSearchParams(location.search).get('sort');
@@ -45,7 +50,7 @@
   // Group into category > section, keeping the relevance order within each
   const grouped = $derived.by(() => {
     const categories: Record<string, Record<string, SearchItem[]>> = {};
-    for (const item of results) {
+    for (const item of visible) {
       const sections = (categories[item.category] ??= {});
       (sections[item.sectionName || ''] ??= []).push(item);
     }
@@ -73,6 +78,8 @@
     <p>
       {#if loading}
         Searching for "{searchTerm}"...
+      {:else if visible.length < results.length}
+        Showing {visible.length} of {results.length} results for "{searchTerm}"
       {:else}
         {results.length}
         {results.length === 1 ? 'result' : 'results'} for "{searchTerm}"
@@ -113,7 +120,7 @@
   </section>
 {:else if view === 'relevance'}
   <section class="service-grid">
-    {#each results as item (item.path)}
+    {#each visible as item (item.path)}
       {#if item.service}
         <ServiceCard
           service={item.service}
@@ -156,6 +163,14 @@
   </section>
 {/if}
 
+{#if shown < results.length}
+  <section class="load-more">
+    <button type="button" onclick={() => (shown += PAGE_SIZE)}>
+      Show {Math.min(PAGE_SIZE, results.length - shown)} more
+    </button>
+  </section>
+{/if}
+
 <style lang="scss">
   .results-head {
     display: flex;
@@ -175,6 +190,27 @@
     p {
       margin: 0;
       opacity: var(--opacity-muted);
+    }
+  }
+
+  .load-more {
+    display: flex;
+    justify-content: center;
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      font-size: var(--text-md);
+      padding: var(--space-sm) var(--space-lg);
+      color: var(--accent-3-text);
+      background: var(--surface);
+      border: var(--border-heavy);
+      border-radius: var(--curve-sm);
+      transition: var(--transition-normal);
+
+      &:hover {
+        box-shadow: var(--shadow-md);
+      }
     }
   }
 
@@ -232,7 +268,8 @@
 
   .by-category,
   .service-grid,
-  .nothing-found {
+  .nothing-found,
+  .load-more {
     max-width: var(--width-container);
     width: calc(100% - 2rem);
     margin: 0 auto var(--space-lg) auto;
