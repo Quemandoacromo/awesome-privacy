@@ -1,5 +1,7 @@
-import type { Category } from '../types/Service';
-import { slugify } from './fetch-data';
+import Fuse from 'fuse.js';
+
+import type { Category, Service } from '../types/Service';
+import { fetchCategories, slugify } from './fetch-data';
 
 export interface SearchItem {
   type: 'Category' | 'Section' | 'Service';
@@ -17,6 +19,7 @@ export interface SearchItem {
   platforms?: string[];
   traits?: string[];
   alternativeTo?: string[];
+  service?: Service;
 }
 
 export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
@@ -34,7 +37,7 @@ export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
     });
 
     // Add section with category context
-    category.sections.forEach((section) => {
+    (category.sections || []).forEach((section) => {
       const sectionPath = `${categoryPath}${slugify(section.name)}/`;
       items.push({
         type: 'Section',
@@ -59,7 +62,7 @@ export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
           sectionName: section.name,
           path: `${sectionPath}${slugify(service.name)}/`,
           logo: service.icon || '',
-          // Get the plafrorm from followWith field or android/ios app
+          // Get the platform from followWith field or android/ios app
           platforms: Object.keys(service)
             .filter((key) => key.endsWith('App'))
             .map((key) => key.replace(/App$/, ''))
@@ -72,6 +75,8 @@ export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
             ),
           // The proprietary tools this section replaces, eg "whatsapp"
           alternativeTo: section.alternativeTo || [],
+          // Kept so results can render a card without a second lookup
+          service,
         });
       });
     });
@@ -79,7 +84,7 @@ export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
   return items;
 };
 
-// Set the fuzziness power. 0 = perfect match, and 1 = barley matched
+// Set the fuzziness power. 0 = perfect match, and 1 = barely matched
 export const SEARCH_SCORE_CUTOFF = 0.85;
 
 export const isRelevant = (result: { score?: number }): boolean =>
@@ -103,3 +108,21 @@ export const searchOptions = {
     { name: 'description', weight: 0.1 },
   ],
 };
+
+// Built once per page, and shared by the search box and the results island
+let indexPromise: Promise<Fuse<SearchItem>> | null = null;
+
+export const getSearchIndex = (): Promise<Fuse<SearchItem>> =>
+  (indexPromise ??= fetchCategories().then((categories) => {
+    // Caching a failed fetch would leave search empty for the whole session
+    if (!categories.length) indexPromise = null;
+    return new Fuse(prepareSearchItems(categories), searchOptions);
+  }));
+
+export const runSearch = async (term: string): Promise<SearchItem[]> =>
+  term
+    ? (await getSearchIndex())
+        .search(term)
+        .filter(isRelevant)
+        .map((r) => r.item)
+    : [];

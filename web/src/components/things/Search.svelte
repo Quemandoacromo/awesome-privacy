@@ -1,13 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import Fuse from 'fuse.js';
-  import { fetchCategories } from '@utils/fetch-data';
   import { formatLink } from '@utils/parse-markdown';
-  import {
-    prepareSearchItems,
-    searchOptions,
-    isRelevant,
-  } from '@utils/do-searchy-searchy';
+  import { runSearch } from '@utils/do-searchy-searchy';
   import type { SearchItem } from '@utils/do-searchy-searchy';
 
   interface Props {
@@ -15,13 +8,29 @@
   }
   const { previousSearch = undefined }: Props = $props();
 
-  let fuse: Fuse<SearchItem> | null = $state(null);
-  let searchQuery = $state('');
+  let searchQuery = $state(previousSearch ?? '');
+  let results: SearchItem[] = $state([]);
+  let isTyping = $state(false);
 
-  // Initialize Fuse.js
-  onMount(async () => {
-    const items = prepareSearchItems(await fetchCategories());
-    fuse = new Fuse(items, searchOptions);
+  // A section or category the query names is usually the intended destination,
+  // unless the query is exactly a service's name
+  const leadWithNamedGroup = (items: SearchItem[], query: string) => {
+    const q = query.trim().toLowerCase();
+    if (items.some((i) => i.type === 'Service' && i.name?.toLowerCase() === q))
+      return items;
+    const named = (i: SearchItem) =>
+      i.type !== 'Service' &&
+      ` ${i.sectionName ?? i.category}`.toLowerCase().includes(` ${q}`);
+    return [...items.filter(named), ...items.filter((i) => !named(i))];
+  };
+
+  // Shares one index with the results island, so both rank identically
+  $effect(() => {
+    const query = searchQuery;
+    runSearch(query).then((found) => {
+      if (query === searchQuery)
+        results = leadWithNamedGroup(found, query).slice(0, 25);
+    });
   });
 
   const makeResultText = (cat?: string, sec?: string, itm?: string) => {
@@ -45,16 +54,6 @@
 
   let activeIndex = $state(-1);
 
-  const results: SearchItem[] = $derived(
-    searchQuery && fuse
-      ? fuse
-          .search(searchQuery)
-          .filter(isRelevant)
-          .map((r) => r.item)
-          .slice(0, 25)
-      : [],
-  );
-
   function handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
@@ -71,6 +70,7 @@
     }
     if (event.key === 'Escape') {
       searchQuery = '';
+      isTyping = false;
       activeIndex = -1;
     }
   }
@@ -90,20 +90,21 @@
   </label>
   <input
     id="search"
-    placeholder={previousSearch || 'Start typing...'}
+    placeholder="Start typing..."
     autocomplete="off"
     role="combobox"
-    aria-expanded={results.length > 0}
+    aria-expanded={isTyping && results.length > 0}
     aria-controls="search-results"
     aria-autocomplete="list"
     aria-activedescendant={activeIndex >= 0
       ? `search-result-${activeIndex}`
       : undefined}
     bind:value={searchQuery}
+    oninput={() => (isTyping = true)}
     onkeydown={handleKeyDown}
   />
 
-  {#if searchQuery.length > 0}
+  {#if isTyping && results.length > 0}
     <div class="suggestions">
       <ul id="search-results" role="listbox" aria-label="Search results">
         {#each results as result, i (result.name + result.category + result.sectionName)}
